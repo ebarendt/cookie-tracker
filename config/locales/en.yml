@@ -30,4 +30,9 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  activerecord:
+    attributes:
+      order:
+        do_si_dos: Do-si-dos
+        smores: S'mores
+        toffee_tastic: Toffee-tastic
