@@ -10,9 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2019_01_23_035050) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "orders", force: :cascade do |t|
+    t.string "girl_name", null: false
+    t.integer "donations", default: 0, null: false
+    t.integer "savannah_smiles", default: 0, null: false
+    t.integer "trefoils", default: 0, null: false
+    t.integer "do_si_dos", default: 0, null: false
+    t.integer "samoas", default: 0, null: false
+    t.integer "tagalongs", default: 0, null: false
+    t.integer "thin_mints", default: 0, null: false
+    t.integer "smores", default: 0, null: false
+    t.integer "toffee_tastic", default: 0, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end
