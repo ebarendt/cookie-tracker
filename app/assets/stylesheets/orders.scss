@@ -1,12 +1,25 @@
 .orders.new {
-  .row {
-    padding: 10px 5px;
-    margin-bottom: 0;
-    width: 450px;
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 650px;
   }
 
   label {
     display: inline-block;
+    margin-top: 4px;
+  }
+
+  .row {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 5px;
+  }
+
+  li {
     width: 200px;
   }
 
