@@ -1,3 +1,22 @@
-// Place all the styles related to the orders controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.orders.new {
+  .row {
+    padding: 10px 5px;
+    margin-bottom: 0;
+    width: 450px;
+  }
+
+  label {
+    display: inline-block;
+    width: 200px;
+  }
+
+  .cookie-donations { background-color: #ffffff; }
+  .cookie-savannah_smiles { background-color: #ffffe0; }
+  .cookie-trefoils { background-color: #00f7ff; }
+  .cookie-do_si_dos { background-color: #ffe200; }
+  .cookie-samoas { background-color: #f4b2ff; }
+  .cookie-tagalongs { background-color: #ffc095; }
+  .cookie-thin_mints { background-color: #b2ffc0; }
+  .cookie-smores { background-color: #ffe5ca; }
+  .cookie-toffee_tastic { background-color: #b2d6ff; }
+}

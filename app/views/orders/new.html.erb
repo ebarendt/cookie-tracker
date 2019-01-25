@@ -1,15 +1,15 @@
 <%= form_with model: @order do |f| %>
-  <div>
+  <div class="row">
     <%= f.label :girl_name %>
     <%= f.text_field :girl_name %>
   </div>
   <% Order::COOKIE_TYPES.each do |type| %>
-    <div>
+    <div class="row cookie-<%= type %>">
       <%= f.label type %>
       <%= f.number_field type %>
     </div>
   <% end %>
-  <div>
+  <div class="row">
     <%= f.submit %>
   </div>
 <% end %>
