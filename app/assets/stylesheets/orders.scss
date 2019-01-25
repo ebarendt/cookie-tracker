@@ -1,8 +1,6 @@
 .orders.new {
-  .container {
-    display: flex;
-    flex-direction: column;
-    width: 650px;
+  table {
+    border-collapse: collapse;
   }
 
   label {
@@ -10,16 +8,8 @@
     margin-top: 4px;
   }
 
-  .row {
-    display: flex;
-    flex: 1;
-    flex-wrap: wrap;
-    list-style: none;
-    margin: 0;
-    padding: 5px;
-  }
-
-  li {
+  td {
+    padding: 10px 5px;
     width: 200px;
   }
 

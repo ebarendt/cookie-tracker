@@ -1,26 +1,26 @@
 <%= form_with model: @order do |f| %>
-  <div class="container">
-    <ul class="row">
-      <li><%= f.label :girl_name %></li>
-      <li><%= f.text_field :girl_name %></li>
-    </ul>
+  <table>
+    <tr>
+      <td><%= f.label :girl_name %></td>
+      <td><%= f.text_field :girl_name %></td>
+    </tr>
 
-    <ul class="row">
-      <li><%= label_tag %></li>
-      <li>In-person</li>
-      <li>Online</li>
-    </ul>
+    <tr>
+      <td><%= label_tag %></td>
+      <td>In-person</td>
+      <td>Online</td>
+    </tr>
 
     <% Order::COOKIE_TYPES.each do |type| %>
-      <ul class="row cookie-<%= type %>">
-        <li><%= f.label type %></li>
-        <li><%= f.number_field type %></li>
-        <li><%= f.number_field type %></li>
-      </ul>
+      <tr class="cookie-<%= type %>">
+        <td><%= f.label type %></td>
+        <td><%= f.number_field type %></td>
+        <td><%= f.number_field type %></td>
+      </tr>
     <% end %>
 
-    <ul class="row">
-      <li><%= f.submit %></li>
-    </ul>
-  </div>
+    <tr>
+      <td><%= f.submit %></td>
+    </tr>
+  </table>
 <% end %>
