@@ -18,14 +18,23 @@ ActiveRecord::Schema.define(version: 2019_01_23_035050) do
   create_table "orders", force: :cascade do |t|
     t.string "girl_name", null: false
     t.integer "donations", default: 0, null: false
+    t.integer "donations_online", default: 0, null: false
     t.integer "savannah_smiles", default: 0, null: false
+    t.integer "savannah_smiles_online", default: 0, null: false
     t.integer "trefoils", default: 0, null: false
+    t.integer "trefoils_online", default: 0, null: false
     t.integer "do_si_dos", default: 0, null: false
+    t.integer "do_si_dos_online", default: 0, null: false
     t.integer "samoas", default: 0, null: false
+    t.integer "samoas_online", default: 0, null: false
     t.integer "tagalongs", default: 0, null: false
+    t.integer "tagalongs_online", default: 0, null: false
     t.integer "thin_mints", default: 0, null: false
+    t.integer "thin_mints_online", default: 0, null: false
     t.integer "smores", default: 0, null: false
+    t.integer "smores_online", default: 0, null: false
     t.integer "toffee_tastic", default: 0, null: false
+    t.integer "toffee_tastic_online", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

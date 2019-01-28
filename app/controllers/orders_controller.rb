@@ -7,7 +7,7 @@ class OrdersController < ApplicationController
     @order = Order.new(order_params)
 
     if @order.save
-      redirect_to new_order_path
+      redirect_to new_order_path, notice: "Thank you. An order was created for #{@order.girl_name}."
     else
       render 'new'
     end
@@ -16,6 +16,7 @@ class OrdersController < ApplicationController
   private
 
     def order_params
-      params.require(:order).permit(:girl_name, *Order::COOKIE_TYPES)
+      types = Order::COOKIE_TYPES.flat_map { |type| [type, "#{type}_online"] }
+      params.require(:order).permit(:girl_name, *types)
     end
 end
