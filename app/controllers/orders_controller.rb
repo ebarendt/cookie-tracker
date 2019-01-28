@@ -1,4 +1,8 @@
 class OrdersController < ApplicationController
+  def index
+    redirect_to new_order_path
+  end
+
   def new
     @order = Order.new
   end
