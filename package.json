@@ -2,7 +2,7 @@
   "name": "cookie_tracker",
   "private": true,
   "engines": {
-    "node": "10.14.1"
+    "yarn": "1.x"
   },
   "dependencies": {
     "jquery": "^3.3.1"
