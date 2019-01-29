@@ -29,11 +29,18 @@
     <% Order::COOKIE_TYPES.each do |type| %>
       <tr class="cookie-<%= type %>">
         <td><%= f.label type %></td>
-        <td><%= f.number_field type %></td>
-        <td><%= f.number_field "#{type}_online" %></td>
+        <td><%= f.number_field type, data: { order_type: "in-person" }, class: "order-in-person" %></td>
+        <td><%= f.number_field "#{type}_online", data: { order_type: "online" }, class: "order-online" %></td>
         <td><%= text_field_tag "#{type}_total", @order.total_for(type), disabled: true, class: 'total' %></td>
       </tr>
     <% end %>
+
+    <tr>
+      <td><%= label_tag 'Totals' %></td>
+      <td><%= text_field_tag "in_person_total", @order.total(:in_person), disabled: true, class: 'in-person-total' %></td>
+      <td><%= text_field_tag "online_total", @order.total(:online), disabled: true, class: 'online-total' %></td>
+      <td><%= text_field_tag "total", @order.total, disabled: true, class: 'final-total' %></td>
+    </tr>
 
     <tr>
       <td><%= f.submit %></td>
