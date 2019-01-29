@@ -36,7 +36,7 @@
     <% end %>
 
     <tr>
-      <td><%= label_tag 'Totals' %></td>
+      <td><%= label_tag 'Total' %></td>
       <td><%= text_field_tag "in_person_total", @order.total(:in_person), disabled: true, class: 'in-person-total' %></td>
       <td><%= text_field_tag "online_total", @order.total(:online), disabled: true, class: 'online-total' %></td>
       <td><%= text_field_tag "total", @order.total, disabled: true, class: 'final-total' %></td>
