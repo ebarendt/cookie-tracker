@@ -1,6 +1,9 @@
 {
   "name": "cookie_tracker",
   "private": true,
+  "engines": {
+    "node": "10.4.0"
+  },
   "dependencies": {
     "jquery": "^3.3.1"
   }
