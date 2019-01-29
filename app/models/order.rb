@@ -5,4 +5,8 @@ class Order < ApplicationRecord
   def total
     COOKIE_TYPES.sum { |type| public_send(type) }
   end
+
+  def total_for(type)
+    send(type) + send("#{type}_online")
+  end
 end
