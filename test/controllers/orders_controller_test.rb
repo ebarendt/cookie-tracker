@@ -1,6 +1,11 @@
 require 'test_helper'
 
 class OrdersControllerTest < ActionDispatch::IntegrationTest
+  test "index" do
+    get orders_path
+    assert_redirected_to new_order_path
+  end
+
   test "should get new" do
     get new_order_url
     assert_response :success

@@ -1,6 +1,12 @@
 class OrdersController < ApplicationController
   def index
-    redirect_to new_order_path
+    respond_to do |format|
+      format.html { redirect_to new_order_path }
+      format.csv do
+        orders = Order.order(:girl_name, :created_at)
+        render csv: OrderDownload.new(orders), filename: "orders"
+      end
+    end
   end
 
   def new
