@@ -1,5 +1,5 @@
 class Order < ApplicationRecord
-  COOKIE_TYPES = %i(donations savannah_smiles trefoils do_si_dos samoas tagalongs thin_mints smores toffee_tastic)
+  COOKIE_TYPES = %i(donations lemon_ups trefoils do_si_dos samoas tagalongs thin_mints smores toffee_tastic)
   validates :girl_name, presence: true
 
   def total(order_type = nil)

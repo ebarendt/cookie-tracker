@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_23_035050) do
+ActiveRecord::Schema.define(version: 2020_02_01_014056) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,8 +19,8 @@ ActiveRecord::Schema.define(version: 2019_01_23_035050) do
     t.string "girl_name", null: false
     t.integer "donations", default: 0, null: false
     t.integer "donations_online", default: 0, null: false
-    t.integer "savannah_smiles", default: 0, null: false
-    t.integer "savannah_smiles_online", default: 0, null: false
+    t.integer "lemon_ups", default: 0, null: false
+    t.integer "lemon_ups_online", default: 0, null: false
     t.integer "trefoils", default: 0, null: false
     t.integer "trefoils_online", default: 0, null: false
     t.integer "do_si_dos", default: 0, null: false
